@@ -1,0 +1,49 @@
+@import "sprite"
+@import "vars"
+@import "mixins"
+@import "normalize"
+
+@import "../libs/bootstrap/scss/bootstrap-reboot.scss"
+@import "../libs/bootstrap/scss/bootstrap-grid.scss"
+@import "../libs/bootstrap/scss/utilities/_sizing.scss"
+/*  FONTS */
+/* ================================================ */
+@font-face
+	font-family: AvenirNext
+	src: url("../fonts/")
+	font-weight: 400
+::placeholder
+	color: #666
+
+::selection
+	background-color: $accent
+	color: #fff
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.65
+	font-family: $default-font
+	overflow-x: hidden
+	input, textarea
+			border: #666 1px solid
+			outline: none
+			&:focus:required:invalid
+				border-color: red
+			&:required:valid
+				border-color: green
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.text-center
+	text-align: center
+
+
+@import "media" // Always at the end
